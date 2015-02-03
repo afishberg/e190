@@ -126,7 +126,7 @@ Pictures:
 More pictures can be found [here](https://github.com/afishberg/e190/tree/master/lab01_pictures)!
 
 ### Conclusions
-I have learned a lot by constructing this controller. I am very excited for the remaining parts to come in and for me to begin
+I have learned a lot by constructing this controller. Between planning, ordering parts, and construction, I easily spent over 14 hours on it thus far. I am very excited for the remaining parts to come in and for me to begin
 writing software for it. I am very happy I constructed the version using very reversable means (only the joysticks are truly in
 a fixed permanent position). This will allow me to make many improvements as I add my remaining extra features without recreating
 the controller from scratch.
