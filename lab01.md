@@ -7,7 +7,7 @@ Next week, for Lab 02, I will write the software needed to use this device to pl
 Additionally, although this lab is complete, I am already planning hardware improvements for next week.
 I will outline future improvements in the Conclusion.
 
-Pictures can be found [here](https://github.com/afishberg/e190/tree/master/lab01_pictures)
+Pictures corresponding with this lab report can be found [here](https://github.com/afishberg/e190/tree/master/lab01_pictures)!
 
 ### Design Methodology
 At this time, my controller uses two 25,000 Ohm potentiometer and the equipment found within the E190U starter kit.
