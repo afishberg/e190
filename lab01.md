@@ -7,6 +7,8 @@ Next week, for Lab 02, I will write the software needed to use this device to pl
 Additionally, although this lab is complete, I am already planning hardware improvements for next week.
 I will outline future improvements in the Conclusion.
 
+Pictures corresponding with this lab report can be found [here](https://github.com/afishberg/e190/tree/master/lab01_pictures)!
+
 ### Design Methodology
 At this time, my controller uses two 25,000 Ohm potentiometer and the equipment found within the E190U starter kit.
 A complete list of hardware as of 2/2/2015 is listed below.
@@ -117,10 +119,14 @@ Extra (coming soon):
 - SHARP Memory Display
 - 4 extra buttons
 
+Pictures:
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab01_pictures/finished_controller_front.jpg "Finished Controller (Front)")
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab01_pictures/finished_controller_back.jpg "Finished Controller (Back)")
 
+More pictures can be found [here](https://github.com/afishberg/e190/tree/master/lab01_pictures)!
 
 ### Conclusions
-I have learned a lot by constructing this controller. I am very excited for the remaining parts to come in and for me to begin
+I have learned a lot by constructing this controller. Between planning, ordering parts, and construction, I easily spent over 14 hours on it thus far. I am very excited for the remaining parts to come in and for me to begin
 writing software for it. I am very happy I constructed the version using very reversable means (only the joysticks are truly in
 a fixed permanent position). This will allow me to make many improvements as I add my remaining extra features without recreating
 the controller from scratch.
