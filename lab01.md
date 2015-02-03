@@ -119,7 +119,11 @@ Extra (coming soon):
 - SHARP Memory Display
 - 4 extra buttons
 
+Pictures:
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab01_pictures/finished_controller_front.jpg "Finished Controller (Front)")
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab01_pictures/finished_controller_back.jpg "Finished Controller (Back)")
 
+More pictures can be found [here](https://github.com/afishberg/e190/tree/master/lab01_pictures)!
 
 ### Conclusions
 I have learned a lot by constructing this controller. I am very excited for the remaining parts to come in and for me to begin
