@@ -7,7 +7,7 @@ internet have begun to come in so I have began doing some testing with those.
 Next week, for Lab 03, I will modify game engines to gather statistical data about the effectiveness of this controller.
 I will outline future improvements in the Conclusion.
 
-
+Pictures corresponding with this lab report can be found [here](https://github.com/afishberg/e190/tree/master/lab02_pictures)!
 
 ### Design Methodology
 At this time, my controller is still in the same state it was last week since I am still experimenting with the new parts
@@ -29,6 +29,9 @@ that came in over the last week. To recall, at the moment my controller is equip
 
 _Note: For more information about the hardware (i.e. where I purchased / obtained the parts) see [Lab 01](https://github.com/afishberg/e190/blob/master/lab01.md)._
 
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab01_pictures/finished_controller_front.jpg "Finished Controller (Front)")
+_Current controller hardware_
+
 #### Steps
 
 Since I did a good job of planning my controller last week, writing this firmware was relatively simple.
@@ -44,6 +47,8 @@ This makes it so I do not to use any "magic numbers" when accessing my state arr
 7. Place the readState() and printState() functions within the loop() function.
 8. Run the program and make sure all state variables are being modified as expected when interacted with -- this implies all
 the wiring from the previous lab was successful.
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab02_pictures/debug_output.png "Debugging output")
+_Sample debugging output_
 9. Write a scale() function that maps a number from 0-1023 to a value from -5 to 5. This -5 to 5 range will be used to 
 represent direction and magnitude for all analog reads.
 10. Write a analogControl() function and add it in the loop() function. This function controls analog values and
@@ -108,6 +113,13 @@ I have not incorporated any of the parts onto the controller yet.
 Looking forward to next week, I'm excited to see how my controller performs. That being said, I have a growing interest
 in designing a real plastic version of this controller and will start looking into that soon.
 
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab02_pictures/playing_tf2.jpg "Playing TF2")
+_Playing TF2 with my completed firmware!_
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab02_pictures/tf2_kill.jpg "Getting a kill in TF2")
+_Getting a kill with my controller in TF2!_
+
+More pictures can be found [here](https://github.com/afishberg/e190/tree/master/lab02_pictures)!
 
 ### Hardware Experiments
 Over the course of this week, I received all the parts I was expecting in the mail. Additionally, I ordered a second
