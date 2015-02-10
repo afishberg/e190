@@ -136,4 +136,5 @@ _The hardware I am currently experimenting with for future inclusion with my con
 The current firmware code is hosted in this repo. A [link](https://github.com/afishberg/e190/blob/master/Controller/Controller.ino) to it can be found here.
 
 I will revise this code in the future once I incorporate my new hardware.
-Additionally, I may clean up a few things to make the code cleaner to follow.
+Additionally, I may clean up a few things to make the code cleaner to follow and write more documentation, since it is
+currently pretty minimal.
