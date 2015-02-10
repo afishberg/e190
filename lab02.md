@@ -123,14 +123,14 @@ More pictures can be found [here](https://github.com/afishberg/e190/tree/master/
 
 ### Hardware Experiments
 Over the course of this week, I received all the parts I was expecting in the mail. Additionally, I ordered a second
-Arduino Micro and got a Protoboard (similar to the ones used in HMC's Microprocessor class).
-
-Using the Nintendo DS screens is proving slightly challenging since there is a great amount of variance between individual
+Arduino Micro and got a Protoboard (similar to the ones used in HMC's Microprocessor class). Using the Nintendo DS screens is proving slightly challenging since there is a great amount of variance between individual
 DS screens. I am currently in the process of writing a calibration method, similar to those on the DS, to address this.
-
-I only just received the E-Ink screen and have not made any attempts to use this yet.
+I only just received the E-Ink screen and have not made any attempts to use this yet. 
 
 Also, I'm planning on looking into how to make a plastic mold for a high quality successor to this controller this week.
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab02_pictures/hardware_experiment.png "Experimental Hardware")
+_The hardware I am currently experimenting with for future inclusion with my controller._
 
 ### Source Code
 As stated in the Lab, my Source Code will be released at some point after the lab is submitted. I will revise this code in
