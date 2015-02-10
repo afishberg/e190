@@ -133,5 +133,7 @@ Also, I'm planning on looking into how to make a plastic mold for a high quality
 _The hardware I am currently experimenting with for future inclusion with my controller._
 
 ### Source Code
-As stated in the Lab, my Source Code will be released at some point after the lab is submitted. I will revise this code in
-the future once I incorporate my new hardware. Additionally, I may clean up a few things to make the code cleaner to follow.
+The current firmware code is hosted in this repo. A [link](https://github.com/afishberg/e190/blob/master/Controller/Controller.ino) to it can be found here.
+
+I will revise this code in the future once I incorporate my new hardware.
+Additionally, I may clean up a few things to make the code cleaner to follow.
