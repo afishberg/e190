@@ -18,7 +18,7 @@ I intentionally do not close the file at any point in the code since it will clo
 I do, however, ensure all file writes do eventually get written by calling flush() after each block of file writes.
 The outfile is designed to be a valid **.csv** file. While the convenient **.csv** format does allow for easy editing and
 analysis in spreadsheet applications, like Microsoft Excel, I personally wrote a simple Python script that calculates the
-statistics of interest directly from the **.csv** file. I have included the code **here**, but please note this code is
+statistics of interest directly from the **.csv** file. I have included the code and collected data [here](https://github.com/afishberg/e190/tree/master/lab03_data). Please note this code is
 written to work specifically on the data spit out from my modifactions -- it is not written to be flexiable code that
 can be easily adapted to other datasets.
 
@@ -109,21 +109,40 @@ Other Noteworthy Files:
 To gather more statistics, I setup my Luguru in my dorm lounge and offered to let students play the game so I
 could gather statistics from a variaty of gamers.
 
-For each participant I asked them to...
+For each participant I asked them to complete the first three challenge levels on easiest game setting with each contoller keybindings -- this makes a minimum of 6 full games of Lugaru. Many players lost on at least one of the levels, however, forcing them to replay the stage. I personally logged what levels the players failed on so I could later identify which records in the log files corresponded to which stage on which controller keybindings.
+
+I wrote a Python Script that consolidated each matches data points into a single row of data. Each rows has the following fields.
+
+*   Seconds -- Duration of the stage
+*   Falls -- Number of times the player was knocked down
+*   Reversals -- Number of times the player reversed an enemy's attack
+*   Damage Dealt -- Damage points inflicted
+*   Damaged Taken -- Damage points taken
+*   Score -- Amount of points awarded for the match
+*   Times Hit -- Number of times damage was applied to the player
+*   Times Hit Enemies -- Number of times damage was applied to the enemies
+
+*Note: The values for Times Hit and Times Hit Enemies appears very high because damage is often applied from physics injuries are applied with lots of little values*
+
+From here, the data was taken into Excel and a graphic was made. This graphic will be discussed in the next session. Additionally I asked each participant which keybindings felt better to them.
 
 
 ### Results and Discussion
 Overall I am very happy with my gathered data. My lab meets the requirements for this assignment plus it provides
-a number of extra statistics, calculations, and users.
+a number of extra statistics, calculations, and participants.
 
 Requirements:
 - I gathered at least two different measurable quantities on at two different controller firmwares
 
 Extras:
-- I gathered a total of **X** statistics
+- I gathered a total of **21** statistics
+   - I made explicit use of **9**
 - I calculated an extra **X** statistics
-- I tested my controller with **X** different participants in my dorm lounge
-- I modified my controller firmware to provide another valuable statistic from the controller, APM
+- I used my stats to make a informative graphic
+- I tested my controller with **4** different participants -- that weren't me -- in my dorm lounge
+   - Each participant completed the first three challenges with each controller binding
+   - Some players needed to retry levels
+- I modified my controller firmware to switch between keybindings without reprogramming the controller
 
 ### Conclusions
 I have learned a lot by modifying the Lugaru game engine. Specifically, I am very impressed how much of the game engine
