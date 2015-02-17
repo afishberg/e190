@@ -59,9 +59,11 @@ The statistics I am most interested in are:
 I will use these gathered data points for my analysis and to calculate other interesting data.
 
 For this experiment, I designed two keymappings for my controller to use. Since Lugaru won't make good use of the Turbo
-function I mapped to the switch, I modified the firmware to switch between these two mappings for these experiments.
-Additionally, in preperation for my e-ink, I modified the firmware to output a players actions per minute (APM) to the 
-serial output.
+function I mapped to the switch, I modified the firmware to use the switch swap between these two mappings.
+
+The two controller setups I tested for this experiment are...
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/keybindings1.png "Keybindings when switch is to the left")
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/keybindings2.png "Keybindings when switch is to the right")
 
 
 
