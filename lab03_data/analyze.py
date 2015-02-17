@@ -40,7 +40,7 @@ while i < lenrows and rows[i] != '':
 		outfile.write(',')
 		outfile.write(line[2])
 		outfile.write(',')
-		outfile.write(line[12])
+		outfile.write(line[13])
 		outfile.write(',')
 		outfile.write(line[14])
 		outfile.write(',')
