@@ -18,7 +18,7 @@ I intentionally do not close the file at any point in the code since it will clo
 I do, however, ensure all file writes do eventually get written by calling flush() after each block of file writes.
 The outfile is designed to be a valid **.csv** file. While the convenient **.csv** format does allow for easy editing and
 analysis in spreadsheet applications, like Microsoft Excel, I personally wrote a simple Python script that calculates the
-statistics of interest directly from the **.csv** file. I have included the code **here**, but please note this code is
+statistics of interest directly from the **.csv** file. I have included the code and collected data [here](https://github.com/afishberg/e190/tree/master/lab03_data). Please note this code is
 written to work specifically on the data spit out from my modifactions -- it is not written to be flexiable code that
 can be easily adapted to other datasets.
 
@@ -59,9 +59,11 @@ The statistics I am most interested in are:
 I will use these gathered data points for my analysis and to calculate other interesting data.
 
 For this experiment, I designed two keymappings for my controller to use. Since Lugaru won't make good use of the Turbo
-function I mapped to the switch, I modified the firmware to switch between these two mappings for these experiments.
-Additionally, in preperation for my e-ink, I modified the firmware to output a players actions per minute (APM) to the 
-serial output.
+function I mapped to the switch, I modified the firmware to use the switch swap between these two mappings.
+
+The two controller setups I tested for this experiment are:
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/keybindings1.png "Keybindings when switch is to the left")
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/keybindings2.png "Keybindings when switch is to the right")
 
 
 
@@ -75,31 +77,72 @@ Files Modified:
 *   OpenGL_Windows.cpp
 *   Person.cpp
 *   GameTick.cpp
+   
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/opengl_windows.png "Code modifications in main()")
+
+*Code added within OpenGL_Windows.cpp's main function -- this code opens the output file and sets up the top of the __.csv__*
+
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/person.png "Code modifications in DoDamage()")
+
+*Code added within Person.cpp's DoDamage function -- this code prints updated data everytime a character takes damage*
+
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/gametick.png "Code modifications in LoadLevel()")
+
+*Code added within GameTick.cpp's LoadLevel function -- this code prints out the time and a message so the log can tell when a new level is started*
 
 Other Noteworthy Files:
 *   Globals.cpp
 *   Constants.h
 
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/globals.png "The variables that store the valuable statistics")
+
+*Shows the global variables that store the valuable statistics I am collecting -- these variables are extern'd into most other files*
+
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/constants.png "The integer values that represent the bonuses")
+
+*Shows the integer values that correspond to the various types of bonuses you can get*
 
 ### Testing Methodology
 To gather more statistics, I setup my Luguru in my dorm lounge and offered to let students play the game so I
 could gather statistics from a variaty of gamers.
 
-For each participant I asked them to...
+For each participant I asked them to complete the first three challenge levels on easiest game setting with each contoller keybindings -- this makes a minimum of 6 full games of Lugaru. Many players lost on at least one of the levels, however, forcing them to replay the stage. I personally logged what levels the players failed on so I could later identify which records in the log files corresponded to which stage on which controller keybindings.
+
+I wrote a Python Script that consolidated each matches data points into a single row of data. Each rows has the following fields.
+
+*   Seconds -- Duration of the stage
+*   Falls -- Number of times the player was knocked down
+*   Reversals -- Number of times the player reversed an enemy's attack
+*   Damage Dealt -- Damage points inflicted
+*   Damaged Taken -- Damage points taken
+*   Score -- Amount of points awarded for the match
+*   Times Hit -- Number of times damage was applied to the player
+*   Times Hit Enemies -- Number of times damage was applied to the enemies
+
+*Note: The values for Times Hit and Times Hit Enemies appears very high because damage is often applied from physics injuries are applied with lots of little values*
+
+From here, the data was taken into Excel and a graphic was made. This graphic will be discussed in the next session. Additionally I asked each participant which keybindings felt better to them.
 
 
 ### Results and Discussion
 Overall I am very happy with my gathered data. My lab meets the requirements for this assignment plus it provides
-a number of extra statistics, calculations, and users.
+a number of extra statistics, calculations, and participants.
 
 Requirements:
 - I gathered at least two different measurable quantities on at two different controller firmwares
 
 Extras:
-- I gathered a total of **X** statistics
+- I gathered a total of **21** statistics
+   - I made explicit use of **9**
 - I calculated an extra **X** statistics
-- I tested my controller with **X** different participants in my dorm lounge
-- I modified my controller firmware to provide another valuable statistic from the controller, APM
+- I used my stats to make a informative graphic
+- I tested my controller with **4** different participants -- that weren't me -- in my dorm lounge
+   - Each participant completed the first three challenges with each controller binding
+   - Some players needed to retry levels
+- I modified my controller firmware to switch between keybindings without reprogramming the controller
 
 ### Conclusions
 I have learned a lot by modifying the Lugaru game engine. Specifically, I am very impressed how much of the game engine
