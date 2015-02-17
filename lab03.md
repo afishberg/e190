@@ -61,7 +61,7 @@ I will use these gathered data points for my analysis and to calculate other int
 For this experiment, I designed two keymappings for my controller to use. Since Lugaru won't make good use of the Turbo
 function I mapped to the switch, I modified the firmware to use the switch swap between these two mappings.
 
-The two controller setups I tested for this experiment are...
+The two controller setups I tested for this experiment are:
 ![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/keybindings1.png "Keybindings when switch is to the left")
 ![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/keybindings2.png "Keybindings when switch is to the right")
 
@@ -77,11 +77,33 @@ Files Modified:
 *   OpenGL_Windows.cpp
 *   Person.cpp
 *   GameTick.cpp
+   
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/opengl_windows.png "Code modifications in main()")
+
+*Code added within OpenGL_Windows.cpp's main function -- this code opens the output file and sets up the top of the __.csv__*
+
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/person.png "Code modifications in DoDamage()")
+
+*Code added within Person.cpp's DoDamage function -- this code prints updated data everytime a character takes damage*
+
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/gametick.png "Code modifications in LoadLevel()")
+
+*Code added within GameTick.cpp's LoadLevel function -- this code prints out the time and a message so the log can tell when a new level is started*
 
 Other Noteworthy Files:
 *   Globals.cpp
 *   Constants.h
 
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/globals.png "The variables that store the valuable statistics")
+
+*Shows the global variables that store the valuable statistics I am collecting -- these variables are extern'd into most other files*
+
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab03_pictures/constants.png "The integer values that represent the bonuses")
+
+*Shows the integer values that correspond to the various types of bonuses you can get*
 
 ### Testing Methodology
 To gather more statistics, I setup my Luguru in my dorm lounge and offered to let students play the game so I
