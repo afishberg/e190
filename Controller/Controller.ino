@@ -47,16 +47,31 @@ const int rbump = 13;
 const int swtch = 14;
 
 // keybindings
-char analog_bindings[] = {'w', 's', 'd', 'a'};
-
-char bindings[] = {
-  ' ', ' ', ' ' , ' ' , ' ', ' ',
-  'a', 'b', // stick
-  'r', '3', // left
-  '1', '2', // right
-  ' ', 'H', // bump
-  'I' // switch
+char analog_bindings[][4] = {
+{'w', 's', 'd', 'a'},
+{'w', 's', 'd', 'a'}
 };
+
+char bindings[][15] = {
+{
+  ' ', ' ', ' ' , ' ' , ' ', ' ',
+  0x81, '-', // stick
+  '-', '-', // left
+  'q', 'e', // right
+  ' ', '[', // bump
+  'I' // switch
+},
+{
+  ' ', ' ', ' ' , ' ' , ' ', ' ',
+  '-', '-', // stick
+  'q', '3', // left
+  '[', 'e', // right
+  0x81, ' ', // bump
+  'I' // switch
+}
+};
+
+int kb = 0;
 
 
 
@@ -152,15 +167,15 @@ void analogControl() {
   
   if (hasMoved(lstick_x)) {
     if (pdir > 0) {
-      Keyboard.release(analog_bindings[2]);
+      Keyboard.release(analog_bindings[kb][2]);
     } else if (pdir < 0) {
-      Keyboard.release(analog_bindings[3]);      
+      Keyboard.release(analog_bindings[kb][3]);      
     }
     
     if (dir > 0) {
-      Keyboard.press(analog_bindings[2]);
+      Keyboard.press(analog_bindings[kb][2]);
     } else if (dir < 0) {
-      Keyboard.press(analog_bindings[3]);      
+      Keyboard.press(analog_bindings[kb][3]);      
     }
   }
   
@@ -169,20 +184,20 @@ void analogControl() {
   
   if (hasMoved(lstick_y)) {
     if (pdir > 0) {
-      Keyboard.release(analog_bindings[0]);
+      Keyboard.release(analog_bindings[kb][0]);
     } else if (pdir < 0) {
-      Keyboard.release(analog_bindings[1]);      
+      Keyboard.release(analog_bindings[kb][1]);      
     }
     
     if (dir > 0) {
-      Keyboard.press(analog_bindings[0]);
+      Keyboard.press(analog_bindings[kb][0]);
     } else if (dir < 0) {
-      Keyboard.press(analog_bindings[1]);      
+      Keyboard.press(analog_bindings[kb][1]);      
     }
   }
   
   // right stick
-  double scaler = pow(2, scale(state[lpotent]) / 2.);sa
+  double scaler = pow(2, scale(state[lpotent]) / 2.);
   Mouse.move(
   scale(state[rstick_x]) * scaler, // 3
   -scale(state[rstick_y]) * scaler // 1.5
@@ -190,27 +205,22 @@ void analogControl() {
 }
 
 void buttonControl() {
-  for (int i = lstick_b; i < rbump; i++) {
-    if (state[swtch]) {
+  kb = (state[swtch] ? 1 : 0);
+  for (int i = lstick_b; i <= rbump; i++) {
+//    if (state[swtch]) {
       if(wasPressed(i)) {
-        Keyboard.press(bindings[i]);
+        if (bindings[kb][i] == '[') {
+          Mouse.press();
+        } else {
+          Keyboard.press(bindings[kb][i]);
+        }
       } else if (wasReleased(i)) {
-        Keyboard.release(bindings[i]);
+         if (bindings[kb][i] == '[') {
+          Mouse.release();
+        } else {
+          Keyboard.release(bindings[kb][i]);
+        }
       }
-    } else {
-      if (isHeld(i)) {
-        Keyboard.write(bindings[i]);
-      }
-    }
-  }
-  
-
-  if(wasPressed(rbump)) {
-    Mouse.press();
-  } else if (wasReleased(rbump)) {
-    Mouse.release();
-  }
-  
 }
 
 boolean wasPressed(int i) {
