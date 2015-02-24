@@ -49,6 +49,18 @@ rendered images "look right."
 
 Below are some examples of when the code malfunctioned and things did not "look right."
 
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/malfunction_dark.png "An error that caused a totally dark window.")
+
+*An error that caused a totally dark window.*
+
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/malfunction_white.png "An error that caused a totally white window.")
+
+*An error that caused a totally white window.*
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/malfunction_teapot.png "An error that caused a faded teapot.")
+
+*An error that caused a faded teapot.*
 
 ### Results and Discussion
 Overall I am very happy with my augmentations. Although I have a lot of experience working with image processing libraries
@@ -68,6 +80,29 @@ Extras:
 
 Pictures of these augmentations at work are provided below.
 
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/box.png "A screenshot of the box blur.")
+
+*A screenshot of the box blur.*
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/gaussian.png "A screenshot of the Gaussian blur.")
+
+*A screenshot of the Gaussian blur.*
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/gaussian2.png "Another screenshot of the Gaussian blur.")
+
+*Another screenshot of the Gaussian blur.*
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/edgedetect.png "A screenshot of the edge detection.")
+
+*A screenshot of the edge detection.*
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/sharpen.png "A screenshot of the sharpen effect.")
+
+*A screenshot of the sharpen effect.*
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/gaussian.png "A screenshot of the identity transformation.")
+
+*A screenshot of the identity transformation.*
 
 ### Conclusions
 I have learned a lot by modifying the sample Nvidia program. Specifically, I learned a lot more about image processing and
