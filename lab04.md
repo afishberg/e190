@@ -100,7 +100,7 @@ Pictures of these augmentations at work are provided below.
 
 *A screenshot of the sharpen effect.*
 
-![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/gaussian.png "A screenshot of the identity transformation.")
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab04_pictures/identity.png "A screenshot of the identity transformation.")
 
 *A screenshot of the identity transformation.*
 
