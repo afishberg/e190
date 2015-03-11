@@ -11,7 +11,7 @@ creative by incorporate this game into my assignment.
 For this lab, I deviated significantly from the suggested activity and created my own complex and (in my opinion) extremely
 interesting variant. That being said, this required me to reinterpret parts of the assignment -- but that's okay given
 the open ended nature of these labs and encouragement to do extras. Specifically, while my lab does not make direct use of
-hand movement detection, although its implementation shares many fundamental principals with the original lab assignment
+hand movement detection, its implementation shares many fundamental principals with the original lab assignment
 (making this a valid and interesting substitution). In fact, one could even argue my application is significantly more
 complex than the proscribed task because my code detects multiple features simultaneously (rather than just a single hand)
 and uses relative positional information to extracts data about the game's current board state.
@@ -27,8 +27,9 @@ Pictures corresponding with this lab report can be found [here](https://github.c
 ### Design Methodology
 Since this assignment requires me to implement novel image processing code, my design process was a lot more exploratory
 than prior labs. Specifically, I followed these step:
+
 1.   Research image processing solutions
-2.   Gather the required resources
+2.   Gather the required resources (screencaping and editing templates from Unblock Me)
 3.   Write a functional implementation (for pixel perfect screenshot)
 4.   Expand implementation to a camera (for picture variance)
 5.   Output board state as a string
