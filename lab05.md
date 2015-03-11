@@ -74,7 +74,9 @@ pieces in the photo.
 
 *A boxed image of the screenshot showing where it detected the red player piece.*
 
-*A mistake where the threshold was too low and an incorrect piece was detected.*
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/error_images/boxed_x2.png" width="250">
+
+*A mistake where the threshold was too low and extra incorrect pieces were detected (many overlapping).*
 
 ### Used Templates
 
