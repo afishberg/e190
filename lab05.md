@@ -62,16 +62,45 @@ the block it detected. The combination of these images allowed me to manually tu
 In the end I found a .99 threshold to work for the screenshot and a .5 threshold for the board and .91 threshold for the
 pieces in the photo.
 
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/input_images/screenshot.png" width="250">
 
 *A pixel perfect screenshot of Unblock Me.*
 
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/screenshot/heatmap_p.png" width="250">
+
 *A heatmap of the screenshot looking for the red player piece.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/screenshot/boxed_p.png" width="250">
 
 *A boxed image of the screenshot showing where it detected the red player piece.*
 
 *A mistake where the threshold was too low and an incorrect piece was detected.*
 
-*The templates used in the detection process.*
+### Used Templates
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/templates/b.png" width="250">
+
+*The template of the board.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/templates/p.png" width="108">
+
+*The template of the red player piece.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/templates/x2.png" width="108">
+
+*The template of the short horizontal piece.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/templates/x3.png" width="165">
+
+*The template of the long horizontal piece.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/templates/y2.png" width="51">
+
+*The template of the short vertical piece.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/templates/y3.png" width="51>
+
+*The template of the long vertical piece.*
 
 ### Results and Discussion
 Overall I am very happy with my progress on my two week project. My code can successfully examine either a screenshot
@@ -80,15 +109,27 @@ if a given set of constraints are followed -- most notably decent lighting, head
 constraints are met, it works. If for some reason, if it isn't however, the threshold const threshold values can be tweaked
 slightly to fix the problem. So that means the detection works!
 
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_b.png" width="250">
+
 *Showing the program detecting the board in a photo.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_p.png" width="250">
 
 *Showing the program detecting the red player piece in a photo.*
 
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_x2.png" width="250">
+
 *Showing the program detecting the short horizontal piece in a photo.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_x3.png" width="250">
 
 *Showing the program detecting the long horizontal piece in a photo.*
 
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_y2.png" width="250">
+
 *Showing the program detecting the short vertical piece in a photo.*
+
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_y3.png" width="250">
 
 *Showing the program detecting the long vertical piece in a photo.*
 
@@ -114,6 +155,7 @@ figure out where the detected pieces are since it has a reference point of where
 To show this works the following board was correctly interpreted as "x__Yy_X_____p___y_y_x_____yx__x_____" (which is correct
 for my notation).
 
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/input_images/photograph.png" width="250">
 
 *The image used to detect the world string "x__Yy_X_____p___y_y_x_____yx__x_____"*
 
@@ -138,7 +180,7 @@ Extras:
 ### Conclusions
 I have learned a lot by implementing this code and look forward to expanding my progress next week to complete a 
 variation of the Lab 06 assignment. This was a super valuable lab which allowed me a great amount of creative freedom.
-As a result, I believe my lab not only shows a firm grasp of the current material, but an novel and cool way of putting
+As a result, I believe my lab not only shows a firm grasp of the current material, but a novel and cool way of putting
 these skills to use.
 
 Between research image processing, writing the code, cleaning it up, testing it, tweaking parameters, and writing up this
