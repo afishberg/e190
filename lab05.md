@@ -11,7 +11,7 @@ creative by incorporate this game into my assignment.
 For this lab, I deviated significantly from the suggested activity and created my own complex and (in my opinion) extremely
 interesting variant. That being said, this required me to reinterpret parts of the assignment -- but that's okay given
 the open ended nature of these labs and encouragement to do extras. Specifically, while my lab does not make direct use of
-hand movement detection, although its implementation shares many fundamental principals with the original lab assignment
+hand movement detection, its implementation shares many fundamental principals with the original lab assignment
 (making this a valid and interesting substitution). In fact, one could even argue my application is significantly more
 complex than the proscribed task because my code detects multiple features simultaneously (rather than just a single hand)
 and uses relative positional information to extracts data about the game's current board state.
@@ -27,8 +27,9 @@ Pictures corresponding with this lab report can be found [here](https://github.c
 ### Design Methodology
 Since this assignment requires me to implement novel image processing code, my design process was a lot more exploratory
 than prior labs. Specifically, I followed these step:
+
 1.   Research image processing solutions
-2.   Gather the required resources
+2.   Gather the required resources (screencaping and editing templates from Unblock Me)
 3.   Write a functional implementation (for pixel perfect screenshot)
 4.   Expand implementation to a camera (for picture variance)
 5.   Output board state as a string
@@ -49,7 +50,7 @@ Since this lab requires use of the GPU, I was happy to find the OpenCV library h
 matching function called [gpu::matchTemplate](http://docs.opencv.org/modules/gpu/doc/image_processing.html#gpu-matchtemplate).
 Additionally, the OpenCV library has multiple different implementations of template matching that can be accessed by
 passing a different ENUM value to the function -- specifically, for this assignment I always used TM_CCOEFF_NORMED.
-
+This [link](http://answers.opencv.org/question/16061/opencv-matchtemplate-cuda-large-images-templates/) was also helpful.
 
 ### Testing Methodology
 Since I was building this code from the ground up, it was important to have benchmarks for myself throughout my development
@@ -74,7 +75,9 @@ pieces in the photo.
 
 *A boxed image of the screenshot showing where it detected the red player piece.*
 
-*A mistake where the threshold was too low and an incorrect piece was detected.*
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/error_images/boxed_x2.png" width="250">
+
+*A mistake where the threshold was too low and extra incorrect pieces were detected (many overlapping).*
 
 ### Used Templates
 
@@ -98,9 +101,10 @@ pieces in the photo.
 
 *The template of the short vertical piece.*
 
-<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/templates/y3.png" width="51>
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/templates/y3.png" width="51"></img>
 
 *The template of the long vertical piece.*
+
 
 ### Results and Discussion
 Overall I am very happy with my progress on my two week project. My code can successfully examine either a screenshot
@@ -110,28 +114,34 @@ constraints are met, it works. If for some reason, if it isn't however, the thre
 slightly to fix the problem. So that means the detection works!
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_b.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_b.png" width="125">
 
-*Showing the program detecting the board in a photo.*
+*Showing the program detecting the board in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_p.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_p.png" width="213">
 
-*Showing the program detecting the red player piece in a photo.*
+*Showing the program detecting the red player piece in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_x2.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_x2.png" width="213">
 
-*Showing the program detecting the short horizontal piece in a photo.*
+*Showing the program detecting the short horizontal piece in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_x3.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_x3.png" width="193">
 
-*Showing the program detecting the long horizontal piece in a photo.*
+*Showing the program detecting the long horizontal piece in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_y2.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_y2.png" width="232">
 
-*Showing the program detecting the short vertical piece in a photo.*
+*Showing the program detecting the short vertical piece in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_y3.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_y3.png" width="232">
 
-*Showing the program detecting the long vertical piece in a photo.*
+*Showing the program detecting the long vertical piece in a photo and corresponding heatmap.*
 
 Additionally, my code needed to also output an accurate board state. To do this, first I needed to create a way
 to represent a given board state. For simplicity in coding and parameter passing, I choose to represent a board
@@ -197,4 +207,4 @@ The intellectual content and images of
 [Unblock Me](https://play.google.com/store/apps/details?id=com.kiragames.unblockmefree&hl=en) belong to their respective
 owner(s) and [Kira Games](http://www.kiragames.com/). The preceding links lead to their Android App and company website
 respectively. Please show your support for their product. I am merely using their content under Fair Use as a subject
-for my research and highly recommend it to all bored puzzle lovers.
+for my research. I highly recommend all bored puzzle lovers download this game!
