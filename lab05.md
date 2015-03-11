@@ -113,32 +113,32 @@ constraints are met, it works. If for some reason, if it isn't however, the thre
 slightly to fix the problem. So that means the detection works!
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_b.png" width="250">
-<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_b.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_b.png" width="125">
 
 *Showing the program detecting the board in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_p.png" width="250">
-<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_p.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_p.png" width="213">
 
 *Showing the program detecting the red player piece in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_x2.png" width="250">
-<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_x2.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_x2.png" width="213">
 
 *Showing the program detecting the short horizontal piece in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_x3.png" width="250">
-<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_x3.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_x3.png" width="193">
 
 *Showing the program detecting the long horizontal piece in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_y2.png" width="250">
-<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_y2.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_y2.png" width="232">
 
 *Showing the program detecting the short vertical piece in a photo and corresponding heatmap.*
 
 <img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/boxed_y3.png" width="250">
-<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_y3.png" width="250">
+<img src="https://raw.githubusercontent.com/afishberg/e190/master/lab05_pictures/debug_output/photograph/heatmap_y3.png" width="232">
 
 *Showing the program detecting the long vertical piece in a photo and corresponding heatmap.*
 
