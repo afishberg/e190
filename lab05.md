@@ -50,7 +50,7 @@ Since this lab requires use of the GPU, I was happy to find the OpenCV library h
 matching function called [gpu::matchTemplate](http://docs.opencv.org/modules/gpu/doc/image_processing.html#gpu-matchtemplate).
 Additionally, the OpenCV library has multiple different implementations of template matching that can be accessed by
 passing a different ENUM value to the function -- specifically, for this assignment I always used TM_CCOEFF_NORMED.
-
+This [link](http://answers.opencv.org/question/16061/opencv-matchtemplate-cuda-large-images-templates/) was also helpful.
 
 ### Testing Methodology
 Since I was building this code from the ground up, it was important to have benchmarks for myself throughout my development
@@ -207,4 +207,4 @@ The intellectual content and images of
 [Unblock Me](https://play.google.com/store/apps/details?id=com.kiragames.unblockmefree&hl=en) belong to their respective
 owner(s) and [Kira Games](http://www.kiragames.com/). The preceding links lead to their Android App and company website
 respectively. Please show your support for their product. I am merely using their content under Fair Use as a subject
-for my research and highly recommend it to all bored puzzle lovers.
+for my research. I highly recommend all bored puzzle lovers download this game!
