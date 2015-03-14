@@ -4,31 +4,37 @@
 In this lab I built the hardware for a fully functional video game controller with the materials found within 
 the E190U starter kit.
 Next week, for Lab 02, I will write the software needed to use this device to play games on the computer.
-Additionally, although this lab is complete, I am already planning hardware improvements for next week.
-I will outline future improvements in the Conclusion.
+I have also gone back and added attional extra features to my controller after getting several extra pieces of hardware
+in the mail.
 
 Pictures corresponding with this lab report can be found [here](https://github.com/afishberg/e190/tree/master/lab01_pictures)!
 
 ### Design Methodology
-At this time, my controller uses two 25,000 Ohm potentiometer and the equipment found within the E190U starter kit.
-A complete list of hardware as of 2/2/2015 is listed below.
+My controller uses equipment found within the E190U starter kit and external additional hardware.
+A complete updated list of hardware as of 3/13/2015 is listed below.
 
-Current Hardware
+#### Starter Kit Hardware
 
 *   Arduino Micro
 *   Tactile Switches (x6)
 *   Joystick Potentiometer with Breakout Board (x2)
 *   Switch
 *   Arduino Mini-breadboard (x2)
-*   25,000 Ohm Potentiometer (x2)
 
-Additional Materials
+##### Additional Extra Hardware
+
+*   25,000 Ohm Potentiometer (x2)
+*   Nintendo DS Touch Screen (x2)
+*   Nintendo DS Breakout Board (x2)
+*   SHARP Memory Display
+
+#### Additional Materials
 *   Electrical Tape
 *   3M Scotch Heavy Duty Mounting Tape
 *   Wood Screws (x4)
 *   Sandpaper (grits used 40, 180, 240, 400)
 
-Steps
+#### Original Steps
 
 1. Think of a design and draw it  -- in this case I sketched it (poorly) on a piece of printer paper (the two extra 
 potentiometers and two breadboards are not shown in this drawing since they are on the back of the controller).
@@ -84,10 +90,27 @@ adjust the positions of buttons after testing and recieving the missing hardware
    pins can be set to pull high in software without extra wiring
    
 10. Test wiring -- all wiring was tested using the "buzz connectivity" feature on the Microprocessor Lab's multimeters
-11. Make improvements when remaining parts come in -- I am currently waiting for the following parts to come in:
-   - Nintendo DS Breakout Board (x2) -- until this comes in, I cannot use the touch screens
+11. Make improvements when remaining parts come in (see extra steps).
+
+#### Extra Steps
+
+I have since received my extra parts and have further augmented my controller design. The additional augmentations include:
+   - Nintendo DS Touchscreen
+   - Nintendo DS Breakout Board (x2)
    - SHARP Memory Display
-   - Additional Tactile Switches -- several broke throughout construction so I need several more to complete my design
+
+##### Nintendo DS Touchscreens
+1. Solder pins onto the Nintendo DS Breakout Boards.
+2. Attach the Nintendo DS Touchscreens to their Breakout Boards.
+3. Use a second Arduino Micro (that I obtained elsewhere) to test how the Nintendo DS Touchscreens need to be wired. 
+Specifically found the following Sparkfun Datapage very helpful,
+[link](https://www.sparkfun.com/datasheets/LCD/HOW%20DOES%20IT%20WORK.pdf).
+4. After comfortable with the hardware, wire into controller.
+ 
+##### SHARP Memory Display
+1. Solder pins onto the board (it came with breakout board-like holes).
+2. Use a second Arduino Micro (that I obtained elsewhere) to test how the SHARP Memory Display needs to be wired.
+3. After comfortable with the hardware, wire into controller.
 
 ### Testing Methodology
 The device was tested several ways:
@@ -100,10 +123,13 @@ I was able to move the buttons around to find the ideal location/distance (at le
 
 Further testing will be conducted next week when I begin to write software -- if I missed a bug somehow, it will be very obvious then!
 
-### Results and Discussion
-Overall I am very happy with my controller. In its current form it seems to be inspired by a combination of the PS2 controller, Nintendo DS, rumors about the Valve Controller, and my own creativity.
+The extra devices were tested with an extra Arduino Micro and Breakout board using seperate programs (sicne their
+circuitry was less obvious than other components (like buttons).
 
-This controler currently meets all basic requirements and has a few extras (with even more to come after the parts come in).
+### Results and Discussion
+Overall I am very happy with my controller. In its current form it seems to be inspired by a combination of the PS2 controller, Nintendo DS, Wii U, rumors about the Valve Controller, and my own creativity.
+
+This controler currently meets all basic requirements and many extras.
 
 Requirements:
 - Controller with 2 joysticks
@@ -113,45 +139,43 @@ Requirements:
 Extras:
 - 2 extra buttons
 - 2 extra potentiometer (on the back)
-
-Extra (coming soon):
 - 2 touch screens
 - SHARP Memory Display
-- 4 extra buttons
 
-Pictures:
+#### Original Pictures:
+
 ![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab01_pictures/finished_controller_front.jpg "Finished Controller (Front)")
+
 ![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab01_pictures/finished_controller_back.jpg "Finished Controller (Back)")
+
+#### Augmentation Pictures
+
+![alt text](https://raw.githubusercontent.com/afishberg/e190/master/lab01_pictures/updated_picture.jpg)
+
+#### All Pictures
 
 More pictures can be found [here](https://github.com/afishberg/e190/tree/master/lab01_pictures)!
 
 ### Conclusions
-I have learned a lot by constructing this controller. Between planning, ordering parts, and construction, I easily spent over 14 hours on it thus far. I am very excited for the remaining parts to come in and for me to begin
-writing software for it. I am very happy I constructed the version using very reversable means (only the joysticks are truly in
-a fixed permanent position). This will allow me to make many improvements as I add my remaining extra features without recreating
-the controller from scratch.
-
-Looking forward to next week, here's how I plan to use my extra features. Additionally, there is a list of hardware improvements I
-intend to include. Some of these improvements may be implemented sooner than other.
+I have learned a lot by constructing this controller. Between planning, ordering parts, and construction, I easily spent over 14 hours on it thus far. 
+After the extra parts came in, I easily spend another 8 hours testing the extra components and incorperating them with my
+current controller design
 
 Planned functionality:
 - One potentiometer on the back will adjust sensitivity of the controller sticks (when they control the mouse)
 - One potentiometer will control the key mappings (there will be 10 regions for different setups)
-- Actions Per Minute (APM) meter
-- Turbo switch
+- The SHARP Memory Display will display the user's current  Actions Per Minute (APM)
+- The Nintendo DS Touchscreens will be usable as an alternative mouse and key mapings
+- The switch will be a turbo switch
 
-Planned improvements:
-- Test button layout with other people -- the button layout is comfortable for me, but I also have relatively large hands
+Possible Future Improvements:
 - Add trigger buttons (below the bumbers)
-- Add grip buttons (on the inside of the grip)
-- Attach buttons to an analog pin -- this will free up many pins allowing me to interface my touch screens and SHARP Memory Display with the Arduino
-- Clean up the wiring -- when rewiring the buttons, adding the touch screens, and wiring in the SHARP Memory display, I may drill
-a hole through the face of the controller so I can run wires through the body of the controller. This would allow for shorter wires
-and easier access to the Arduino (which is on the back of the controller)
+- Clean up the wiring -- when rewiring the buttons, adding the touch screens, and wiring in the SHARP Memory display, I may drill a hole through the face of the controller so I can run wires through the body of the controller. This would allow for shorter wires and easier access to the Arduino (which is on the back of the controller)
+- Design and print a 3D printed plastic chassis
 
 In closing, I think I would be very interested in taking this controller design to the next level later in the semester. I would
 like to design a new version to be 3D printed out of plastic (using this version for inspiration). I actually think this controller
-is very comfortable, unique, and powerful -- I actually think I might be onto something with this new unique design.
+is very comfortable, unique, and powerful -- I might be onto something with this new unique design.
 
 ### Source Code
 Since this lab was strictly the construction of the controller, there is no source code this week.
